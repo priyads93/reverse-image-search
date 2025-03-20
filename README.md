@@ -19,10 +19,6 @@ $ pip install -r /path/to/requirements.txt
 chroma run --path /db_path
 ```
 
-## Modify path details in code base
-
-In line number 33 and line number 40 of image-search.py modify the path to the images folder present in local system
-
 ## Code Execution
 
 Execute the code with following command line in terminal
@@ -30,3 +26,7 @@ Execute the code with following command line in terminal
 ```bash
 python3 <full path to the image-search.py>
 ```
+
+
+## Reference Link
+https://www.sbert.net/docs/sentence_transformer/pretrained_models.html#image-text-models

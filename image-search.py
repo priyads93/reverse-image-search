@@ -29,15 +29,15 @@ def create_image_embedding(image):
     return img_emb
 
 
-
-path = r"/home/priya-hp/Documents/training/image-search/reverse-image-search-repo/reverse-image-search/images/"
+dirname = os.path.dirname(__file__)
+path = os.path.join(dirname, "images/")
 dir_list = os.listdir(path)
 
 contents = list(map(lambda file_name: f"{path}{file_name}",dir_list))
 
 
 def search_for_image():
-    searchImage = r"/home/priya-hp/Documents/training/image-search/reverse-image-search-repo/reverse-image-search/searchImages/verify.jpg"
+    searchImage = os.path.join(dirname,"searchImages","verify.jpg")
     # Resize the image to meet model requirements
     resized_image = resize_image(searchImage)
 
