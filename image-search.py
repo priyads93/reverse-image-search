@@ -36,7 +36,17 @@ dir_list = os.listdir(path)
 contents = list(map(lambda file_name: f"{path}{file_name}",dir_list))
 
 
-def search_for_image():
+# Loop through contents array to encode each image, generate its embedding, and append to array
+for obj in contents:
+    # Resize the image to meet model requirements
+    resized_image = resize_image(obj)    
+
+    # Generate the embedding for the resized image
+    image_embedding = create_image_embedding(resized_image)
+    collection.upsert(ids=[Path(obj).stem],embeddings=[image_embedding])
+
+
+def handler():
     searchImage = os.path.join(dirname,"searchImages","verify.jpg")
     # Resize the image to meet model requirements
     resized_image = resize_image(searchImage)
@@ -50,16 +60,7 @@ def search_for_image():
     )
     print(final_response)
 
-# Loop through contents array to encode each image, generate its embedding, and append to array
-for obj in contents:
-    # Resize the image to meet model requirements
-    resized_image = resize_image(obj)    
 
-    # Generate the embedding for the resized image
-    image_embedding = create_image_embedding(resized_image)
-    collection.upsert(ids=[Path(obj).stem],embeddings=[image_embedding])
-
-search_for_image()
 
 
 
