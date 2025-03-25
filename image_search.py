@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 
 # Model and processor configuration
-model = SentenceTransformer('clip-ViT-B-32')
+model = SentenceTransformer('clip-ViT-B-16')
 
 # Define chroma client and collection details
 chroma_client = chromadb.HttpClient(host='localhost', port=8000)
@@ -59,6 +59,8 @@ def handler():
         include=["distances"]
     )
     print(final_response)
+
+handler()
 
 
 

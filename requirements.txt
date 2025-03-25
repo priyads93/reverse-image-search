@@ -2,3 +2,11 @@ chroma-hnswlib==0.7.6
 chromadb==0.6.3
 Pillow==9.0.1
 sentence-transformers==3.4.1
+flask-restful==0.3.10
+numpy==2.0.2
+pgvector==0.4.0
+pyscopg2==2.9.10
+
+
+
+
