@@ -26,11 +26,19 @@ sudo make install
 
 ## DB Initialization
 
-1. Download postgresql server in local [text](https://www.postgresql.org/download/)
-2. Start the server and create database by following the steps here [text](https://www.postgresql.org/docs/current/tutorial-createdb.html)
+1. Download postgresql server in local [postgresql download](https://www.postgresql.org/download/)
+2. Start the server and create database by following the steps here [createdb](https://www.postgresql.org/docs/current/tutorial-createdb.html)
 3. Create extension for pg-vector and add table using the 'db-init.sql' script
 
 ## Steps to Run In Local as REST API
+
+1. Create .env file along with the following details
+
+```bash
+DB_USER_NAME=<db-user-name>
+DB_NAME=<db-name>
+DB_HOST_NAME=<db-host-name>
+```
 
 Execute the code with following command line in terminal
 

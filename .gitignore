@@ -18,6 +18,7 @@ var/
 .venv
 chroma_data
 chroma.log
+.env
 
 # Serverless directories
 .serverless
