@@ -62,6 +62,11 @@ python3 <full path to the image_embeddings_api.py>
 http://127.0.0.1:5000/?image_url=<image-url>
 ```
 
+## Steps to Seed Data
+
+1. Create a csv file along with id -> uuid format, Url -> link to the image file
+2. Save the csv file as "seed_data.csv" and then trigger the "initial_image_loading_from_csv.py" file from local. (DB configuration is mandatory for this task to insert data in DB)
+
 
 ## Steps to Run In Local as Python file
 #### Initialize chromadb database
