@@ -3,8 +3,8 @@ from sentence_transformers import SentenceTransformer, util
 import requests
 
 # Model and processor configuration
-model = SentenceTransformer('clip-ViT-B-32')
-
+#model = SentenceTransformer('clip-ViT-B-32')
+model = SentenceTransformer('clip-ViT-L-14')
 
 
 # Define max width and height for resizing

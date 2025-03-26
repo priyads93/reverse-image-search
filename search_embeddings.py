@@ -8,7 +8,7 @@ def search_embeddings(image:str,cur):
     
     cur.execute(
             """SELECT id,url, 1 - (embedding <=> %s) AS cosine_similarity
-               FROM image_search
+               FROM image_search_l14
                ORDER BY cosine_similarity DESC LIMIT 6""",
             (json.dumps(search_image_embedding.tolist()),)
         )

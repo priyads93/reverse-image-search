@@ -49,7 +49,7 @@ class Imageembeddings(Resource):
         id = data['id']        
        
         cur.execute(
-                "INSERT INTO public.image_search (id,url,embedding) VALUES (%s, %s, %s)",
+                "INSERT INTO image_search_l14 (id,url,embedding) VALUES (%s, %s, %s)",
                 (id,data['url'],image_embedding.tolist(),)
             )
         conn.commit()
